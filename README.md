@@ -26,7 +26,7 @@ element-selector:active:before {
 ```
 
 
-##Javascript
+##RESTful APIs
 
-###jQuery
-If you are making an ajax call using jquery and your response consists of a raw string and no array or object, then you can get status 200 OK but invoke the error callback instead of success.
+###With PHP
+Always use json_encode() when returning json data, even when it is a simple string value. Otherwise jQuery ajax calls activate the error callback on success. 
