@@ -24,3 +24,9 @@ element-selector:active:before {
   left: -Xpx; /* border plus shift amount */
 }
 ```
+
+
+##Javascript
+
+###jQuery
+If you are making an ajax call using jquery and your response consists of a raw string and no array or object, then you can get status 200 OK but invoke the error callback instead of success.
