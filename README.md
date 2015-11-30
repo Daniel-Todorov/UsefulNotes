@@ -25,6 +25,8 @@ element-selector:active:before {
 }
 ```
 
+###Center block/inline-block element
+To position such element, give it's parent postion: relative; Then make sure the element has position: absolute; margin: auto; top/right/bottom/left: 0; and defined width and height. It is expremely good browser support that compensate for the need to define height.
 
 ##RESTful APIs
 
