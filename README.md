@@ -28,6 +28,9 @@ element-selector:active:before {
 ###Center block/inline-block element
 To position such element, give it's parent postion: relative; Then make sure the element has position: absolute; margin: auto; top/right/bottom/left: 0; and defined width and height. It is expremely good browser support that compensate for the need to define height.
 
+###Horizontaly align elements with 50% width
+When you give two divs width: 50%, they will most probably end on different lines. The cause for this is a blank space character that is generated between them. To counter it, either go to your source code and make sure the ending tag of the first div and the opening tag of the second are at the same line without any sapce between them, or set their parent's font-size: 0. Take in mind that font-size is inherited, so you need to specifically assign font-size value to the children elements, if you want to have some text inside them.
+
 ##RESTful APIs
 
 ###With PHP
