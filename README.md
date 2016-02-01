@@ -31,6 +31,20 @@ To position such element, give it's parent postion: relative; Then make sure the
 ###Horizontaly align elements with 50% width
 When you give two divs width: 50%, they will most probably end on different lines. The cause for this is a blank space character that is generated between them. To counter it, either go to your source code and make sure the ending tag of the first div and the opening tag of the second are at the same line without any sapce between them, or set their parent's font-size: 0. Take in mind that font-size is inherited, so you need to specifically assign font-size value to the children elements, if you want to have some text inside them.
 
+###Change dynamically the content value of a pseudo element
+A pseudo element is unable to be selected with javascript thus it makes the dynamic change of its content attribute a hard task. This, however is easily solved if you use attr() as value for the content of that element. attr() takes one argument - a name of an attribute of the main element. Let's say we have a div and a :before pseudo element. In the stylesheet, we can set:
+```
+div::before {
+  content = attr('data-text');
+}
+```
+and in our html, we can set:
+```
+<div data-text="Text"></div>
+```
+This will make the initial value of our :before to equal 'Text'. And we can easily select the div and change the data-text attribute with javascript.
+
+
 ##RESTful APIs
 
 ###With PHP
